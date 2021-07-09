@@ -1,0 +1,18 @@
+1 : install cli for nest.js
+npm install -g @nestjs/cli
+or
+yarn global add @nestjs/cli
+-------------------------------------------------
+2: documentation of nest 
+https://docs.nestjs.com/
+
+3 : cli documentation
+https://docs.nestjs.com/cli/overview
+-------------------------------------------------
+5: create a new project
+nest new nestjs-task-management
+-------------------------------------------------
+6: run the project on debug mode:
+npm run dev:debug
+-------------------------------------------------
+7: generate new module
