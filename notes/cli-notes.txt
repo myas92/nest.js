@@ -16,3 +16,10 @@ nest new nestjs-task-management
 npm run dev:debug
 -------------------------------------------------
 7: generate new module
+nest g module tasks
+-------------------------------------------------
+8: create controller
+nest g controller tasks --no-spec
+-------------------------------------------------
+9: create service
+nest g service tasks --no-spec
