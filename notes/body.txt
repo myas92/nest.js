@@ -1,0 +1,24 @@
+1:
+//First method for Body
+@Post()
+createTask(@Body() body) {
+    console.log('body', body)
+}
+--------------------------------------------------------------------
+2:
+//Second method for Body
+@Post()
+createTask(
+    @Body('title') title: string,
+    @Body('description') description: string
+): Task {
+    return this.taskService.createTask(title, description)
+}
+--------------------------------------------------------------------
+3:
+//First method for Param
+@Get('/:id')
+getTaskById(@Param('id') id: string) {
+    return this.taskService.getTaskById(id)
+}
+--------------------------------------------------------------------
