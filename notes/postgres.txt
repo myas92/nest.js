@@ -20,3 +20,6 @@ npm i @nestjs/typeorm typeorm pg --save
 5: EntityMetadataNotFound: No metadata for “Task” was found - NestJS
 entities: [__dirname + '/../**/*.entity{.ts,.js}'], 
 ------------------------------------------------------------------------------------------------------
+6: documentation of repository (find, findOne, count,...)
+https://typeorm.delightful.studio/classes/_repository_repository_.repository.html
+------------------------------------------------------------------------------------------------------
