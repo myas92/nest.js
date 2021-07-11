@@ -1,0 +1,22 @@
+1: based on below documentation
+https://websiteforstudents.com/install-postgresql-with-pgadmin-on-ubuntu-20-04-18-04/
+-------------------------------------------------------------------------------------------------------
+2: install pgadmin
+https://stackoverflow.com/questions/58239607/pgadmin-package-pgadmin4-has-no-installation-candidate
+-------------------------------------------------------------------------------------------------------
+3: Accessing PostgreSQL
+
+sudo su -l postgres
+psql
+\password postgres
+\q
+
+note: set password after that we can use pgadmin
+because in the pgadmin we use above passowrd
+------------------------------------------------------------------------------------------------------
+4: install typeorm
+npm i @nestjs/typeorm typeorm pg --save
+------------------------------------------------------------------------------------------------------
+5: EntityMetadataNotFound: No metadata for “Task” was found - NestJS
+entities: [__dirname + '/../**/*.entity{.ts,.js}'], 
+------------------------------------------------------------------------------------------------------
