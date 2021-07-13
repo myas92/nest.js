@@ -1,0 +1,9 @@
+bcrypt module
+hash = password + salt
+
+salt = await bcrypt.genSalt();
+hash = await bcrypt.hash(password, salt);
+-------------------------------------------
+bcryptjs module
+hash = await bcrypt.hash(password, 12);
+--------------------------------------------

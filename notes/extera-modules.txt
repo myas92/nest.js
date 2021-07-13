@@ -1,0 +1,14 @@
+1: npm install bcrypt --save
+---------------------------------------------
+2: npm i @nestjs/typeorm typeorm pg --save
+---------------------------------------------
+3: npm i  --save  @nestjs/jwt @nestjs/passport passwort passport-jwt --save
+---------------------------------------------------------------------------------
+4: after install password show this Error
+import * as passport from 'passport';
+Found 1 error. Watching for file changes.
+
+solved : npm i @types/passport --save
+https://stackoverflow.com/questions/62641382/cannot-find-module-passport-or-its-corresponding-type-declarations
+
+------------------------------------------------------------------------------------------------------------------
