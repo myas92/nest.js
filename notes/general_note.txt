@@ -1,15 +1,21 @@
 1: delete method in service is "void"
-------------------------------------------------
+-----------------------------------------------------------
 2:uuid
 import { v4 as uuidv4 } from 'uuid';
 uuidv4();
-------------------------------------------------
+------------------------------------------------------------
 3:using pipe(validate and transform) need to below modules
 npm install class-validator class-transformer --save
------------------------------------------------------------
+------------------------------------------------------------
 4: documentation of class-validator
 https://github.com/typestack/class-validator#readme
 ------------------------------------------------------------
 4: we can use idx instead of index
 index = idx
+------------------------------------------------------------
+5: pass ENV 
+PORT=3000 npm run start:dev
+------------------------------------------------------------
+6: Enable Cors in main();
+  app.enableCors()
 ------------------------------------------------------------

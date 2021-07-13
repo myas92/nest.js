@@ -23,3 +23,7 @@ nest g controller tasks --no-spec
 -------------------------------------------------
 9: create service
 nest g service tasks --no-spec
+-------------------------------------------------
+10: create config folder and config project
+npm i config
+--------------------------------------------------

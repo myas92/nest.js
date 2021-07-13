@@ -1,0 +1,21 @@
+1: there two way for using yaml
+
+one: 
+
+import * as config from 'config';
+const jwtConfig = config.get('jwt');
+let secret = jwtConfig.secret;
+
+
+two:
+
+import * as config from 'config';
+let secret = config.get('jwt.secret');
+--------------------------------------------------------
+2: after declare a variable in yml, use space
+db: 
+  synchronize: false
+
+db:
+    synchronize:"space"false
+--------------------------------------------------------
