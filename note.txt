@@ -1,0 +1,10 @@
+$2b$10$V83yeuxaoseRlvuRdlLV1eoHTuI2lqj9pzI9Ju0kQIlDuaqnBJHYC 153
+
+$2b$10$9rPGjBWG618.jm3Q8Uy/xe6rjJ.J99xuZqOo2SuPqBzJD0J3VoLJy 142
+$2b$10$DvMyTZRemNawDDSBJ11U6Orqhlhw9ykY8u0WvZwcxOxWTwrFCDXxS 30
+$2b$10$4uEHc9RtmVr7B20SuhgjYenq8k7X882BcPmZLl1MucXRl5tWvCqpy 91
+
+
+INSERT INTO public."user"(
+	id, username, password, salt)
+	VALUES (1, 'ali', '123', '3123');

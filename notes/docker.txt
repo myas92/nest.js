@@ -1,0 +1,18 @@
+1: check steps in this documentation
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+------------------------------------------------------------
+2: طبق داکیومنت بالا اگه جلو بریم هر سری باید ماژول ها نصب بشن و اصلا بهینه نیست
+https://bitjudo.com/blog/2014/03/13/building-efficient-dockerfiles-node-dot-js/
+----------------------------------------------------------------------------------------
+3: Change CMD command
+CMD [ "node", "dist/main.js" ]
+---------------------------------------------------------------------------------------------
+4: use RUN
+RUN npm run build
+---------------------------------------------------------------------------------------------
+5: create .dockerignore
+node_modules
+npm-debug.log
+----------------------------------------------------------------------------------------------
+5: build your image
+docker build . -t <your username>/node-web-app

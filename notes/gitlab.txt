@@ -1,0 +1,22 @@
+1: use Shekan IPs
+nameserver 185.51.200.2
+nameserver 178.22.122.100
+
+command:
+suod vim /etc/resolv.conf
+-------------------------------------------------------------------------------------------------
+2: for clone
+git clone https://yaser.ahmadi@gitlab.com/ilinku/ilinku_backend_nodejs_nestjs_v1.git
+git clone https://{username}@gitlab.com/project address
+-------------------------------------------------------------------------------------------------
+disbale
+sudo sysctl net.ipv6.conf.all.disable_ipv6=1
+
+
+------------------
+enable
+vim /etc/sysctl.conf
+net.ipv6.conf.default.disable_ipv6 = 0
+net.ipv6.conf.all.disable_ipv6 = 0
+
+sysctl net.ipv6.conf.all.disable_ipv6=0

@@ -1,0 +1,42 @@
+1:  ابتدا باید مشخصات سیستم عامل رو در بیاریم تا بر اساس اون گیت رو اضافه کنیم
+
+uname -mrs
+------------------------------------------------------------------------------------
+2: استفاده از لینک زیر که مراحل را توضیح داده است
+
+https://docs.gitlab.com/runner/install/linux-manually.html
+--------------------------------------------------------------------------------------------------------------
+3: Simply download one of the binaries for your system: بر اساس اطلاعات سیستم عامل مورد نظر
+
+sudo curl -L --output /usr/local/bin/gitlab-runner "https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-arm64"
+-----------------------------------------------------------------------------------------------------
+3:Give it permissions to execute:
+sudo chmod +x /usr/local/bin/gitlab-runner
+-------------------------------------------------------------------------------------------------
+4:Create a GitLab CI user:
+sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+---------------------------------------------------------------------------------------
+5: Install and run as service:
+sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+sudo gitlab-runner start
+--------------------------------------------------------------------------------------------
+6: register a runner based on https://docs.gitlab.com/runner/register/index.html
+sudo gitlab-runner register
+
+input : gitlab.com/
+name : My Runner
+token : setting of project > CI/CD > Runner > copy and paste token
+executer : based on https://docs.gitlab.com/runner/executors/index.html> shell
+------------------------------------------------------------
+7: دادن دسترسی روت به گیت لب
+sudo vim /etc/sudoers
+-----------------------------------------------------------
+8: type blow of User privilege sepectification
+gitlab-runner ALL=(ALL) NOPASSWD: ALL
+------------------------------------------------------------
+9: تمام
+sudo gitlab-runner restart
+--------------------------------------------------------------
+10:برای من توی گیت لب پروژه  تیک تایید نخورد 
+ sudo gitlab-runner verfiy
+ -----------------------------------------------------------------

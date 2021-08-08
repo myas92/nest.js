@@ -1,0 +1,31 @@
+version: "3"
+services:
+    api:
+        # image: thomas-oliver/nestjs-dockerized 
+        build:
+            dockerfile: Dockerfile
+            context: .
+        container_name: prjname
+        depends_on: 
+            - postgres
+        environment: 
+            DATABASE_URL: postgres://user:password@postgres:5432/db
+            NODE_ENV: development
+            PORT: 4041
+        ports:
+            - "8080:4041"
+
+    postgres:
+        image: postgres:10.4
+        container_name: pgdb
+        ports:
+            - "54321:5432"
+        environment: 
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: db
+        volumes:
+            - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

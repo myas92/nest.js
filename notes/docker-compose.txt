@@ -1,0 +1,10 @@
+1: اگر کد تغییر میکند و میخواهیم تغییرات در کانتینرها اعمال شود
+docker-compose up --build
+
+جون با بیلد کردن تغییرات در ایمیج ها اعمال می شود و با دستور آپ کانتینر ایجاد و اجرا می شود
+-------------------------------------------------------------------------------------------------
+2: برای وصل شدن به دیتابیس کانتینر
+https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection
+docker ps
+docker inspect <dockerContainerId> | grep IPAddress
+eg: docker inspect 2f50fabe8a87 | grep IPAddress
