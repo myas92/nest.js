@@ -23,3 +23,19 @@ entities: [__dirname + '/../**/*.entity{.ts,.js}'],
 6: documentation of repository (find, findOne, count,...)
 https://typeorm.delightful.studio/classes/_repository_repository_.repository.html
 ------------------------------------------------------------------------------------------------------
+backup
+1: first backup from DATABASE
+2; the data sored in /home/yaser/name
+3: remove all collection with 3 steps
+
+SELECT * FROM pg_stat_activity WHERE datname = 'pntcap_20200509';// show the connections
+
+REVOKE CONNECT ON DATABASE pntcap_20200509 FROM public;
+
+SELECT pg_terminate_backend(pg_stat_activity.pid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'pntcap_20200509';
+
+4: create a database based on old name
+5: restore databse
+---------------------------------------------------------------------------

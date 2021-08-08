@@ -3,8 +3,9 @@ server:
 
 db: 
   type: 'postgres'
-  port: 5432
+  port: 4545
   database: 'taskmanagement'
 
 jwt:
   expiresIn: 3600
+  secret: 'jwtsecret'

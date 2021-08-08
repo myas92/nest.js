@@ -4,6 +4,7 @@ import { AuthService } from './auth.service';
 import { AuthCredentialsDto } from './dto/auth-credentials.dto';
 import { Body, Controller, Post, Req, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
+import {Decrypt, EncryptResponse} from '../../hashing/encryption';
 
 @Controller('auth')
 export class AuthController {
@@ -28,6 +29,19 @@ export class AuthController {
     @UseGuards(AuthGuard())
     test(@GetUser() user:User){
         console.log(user);
+    }
+
+    @Post('/encrypt')
+    encrypt(@Body() body){
+        console.log(body);
+        console.log("---------------------------------------------------");
+        let enData = EncryptResponse(body);
+        console.log(enData);
+        console.log("**********************");
+        let deData = Decrypt(enData.data)
+        console.log(deData);
+        return enData
+        console.log("---------------------------------------------------");
     }
     
 }
